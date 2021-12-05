@@ -1,0 +1,147 @@
+---
+---
+
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&family=Nunito:wght@400;600;700;900&display=swap');
+
+@mixin accent {
+  background: linear-gradient(180deg, rgb(64, 224, 208), rgb(76, 64, 224));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: inherit !important;
+  }
+
+  #bio {
+    font-size: 14pt;
+  }
+
+  #header, #footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .container > div {
+    flex-grow: 1;
+  }
+
+  .avatar {
+    margin: auto;
+  }
+}
+
+body {
+  background: rgba(20, 20, 20, 1);
+  font-family: "Monaco", "Azeret Mono", monospace;
+  color: #f0f0f0;
+  padding: 5em;
+}
+
+.identifiers, .links {
+  font-size: 12pt;
+}
+
+a {
+  background-image: linear-gradient(45deg, rgb(64, 224, 208), rgb(76, 64, 224));
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  background-position: 0 88%;
+  transition: background-size 250ms ease;
+  color: #fff;
+  text-decoration: none;
+
+  &:hover {
+    background-size: 100% 88%;
+  }
+}
+
+.accent {
+  @include accent;
+}
+
+.icon {
+  margin-right: 0.35em;
+
+  * {
+    fill: url(#ag);
+  }
+}
+
+h1 {
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 0;
+  font-weight: 900;
+}
+
+h1 > small {
+  font-size: 50%;
+  font-weight: 600;
+}
+
+h2, h3, h4 {
+  margin: 0;
+
+  ul {
+    margin: 0;
+  }
+}
+
+#bio {
+  margin-bottom: inherit;
+  list-style-type: none;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  color: #dddddd;
+
+  li {
+    &.primary {
+      font-weight: 900;
+    }
+
+    &.secondary {
+      font-weight: 400;
+    }
+
+    b {
+      font-weight: 700;
+    }
+  }
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+  flex-direction: row;
+  justify-content: left;
+  font-size: 16pt;
+
+  ul {
+    list-style: none;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.identifiers {
+  margin-left: auto;
+  text-align: left;
+  padding: 0;
+}
+
+.links {
+  margin-right: auto;
+  text-align: right;
+}
+
+.avatar {
+  border-radius: 50%;
+  // iOS will only render this correctly with this fucky hack
+  transform: translateZ(0);
+}

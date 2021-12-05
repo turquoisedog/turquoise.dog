@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<div id="header">
+  <img src="/assets/avatar.png" class="avatar" />
+  <h1 class="accent">
+    Azur <small>/AZH-ər/</small>
+  </h1>
+
+  <h3>
+    <ul id="bio">
+      <li class="accent secondary">
+        I go by <b>they/them</b> pronouns.
+      </li>
+      <li class="accent secondary">
+        Currently, I live in <b>Ontario, Canada</b>.
+      </li>
+    </ul>
+  </h3>
+</div>
+
+<div class="flex container">
+  <div class="flex">
+    <ul class="identifiers">
+      <li>twitter</li>
+      <li>steam</li>
+      <li>discord</li>
+    </ul>
+  </div>
+  <div class="flex">
+    <ul class="links">
+      <li><a href="https://twitter.com/{{ site.twitter_username }}">@{{ site.twitter_username }}</a></li>
+      <li><a href="https://steamcommunity.com/id/{{ site.steam_username }}">/id/{{ site.steam_username }}</a></li>
+      <li>{{ site.discord_username }}</li>
+    </ul>
+  </div>
+</div>
