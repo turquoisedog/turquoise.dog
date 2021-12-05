@@ -3,13 +3,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&family=Nunito:wght@400;600;700;900&display=swap');
 
-@mixin accent {
-  background: linear-gradient(180deg, rgb(64, 224, 208), rgb(76, 64, 224));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 @media only screen and (max-width: 600px) {
   body {
     padding: inherit !important;
@@ -60,27 +53,15 @@ a {
   }
 }
 
-.accent {
-  @include accent;
-}
-
-.icon {
-  margin-right: 0.35em;
-
-  * {
-    fill: url(#ag);
-  }
-}
-
 h1 {
   font-family: "Nunito", sans-serif;
   margin-bottom: 0;
   font-weight: 900;
-}
 
-h1 > small {
-  font-size: 50%;
-  font-weight: 600;
+  >small {
+    font-size: 50%;
+    font-weight: 600;
+  }
 }
 
 h2, h3, h4 {
@@ -113,12 +94,19 @@ h2, h3, h4 {
   }
 }
 
+.accent {
+  background: linear-gradient(180deg, rgb(64, 224, 208), rgb(76, 64, 224));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .container {
   padding: 0;
   margin: 0;
   flex-direction: row;
   justify-content: left;
-  font-size: 16pt;
+  font-size: 14pt;
 
   ul {
     list-style: none;
@@ -144,4 +132,15 @@ h2, h3, h4 {
   border-radius: 50%;
   // iOS will only render this correctly with this fucky hack
   transform: translateZ(0);
+}
+
+.badge {
+  padding: 0.05rem 0.35rem;
+  border-radius: 1rem 0.25rem 0.25rem 1rem;
+  background-color: #444;
+  color: rgba(255, 255, 255, 0.85);
+
+  &:first-of-type {
+    margin-left: 0.25rem;
+  }
 }
