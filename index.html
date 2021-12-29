@@ -2,6 +2,16 @@
 layout: default
 ---
 
+<script>
+  var today = new Date().getTime()
+  var birthday = new Date("2000-12-07").getTime()
+  var age = Math.floor((today - birthday) / (1000 * 60 * 60 * 24 * 365.25))
+
+  window.addEventListener("DOMContentLoaded", (event) => {
+    document.getElementById("age").innerText = age
+  })
+</script>
+
 <div id="header">
   <img src="/assets/avatar.png" class="avatar" />
   <h1 class="accent">
@@ -14,7 +24,7 @@ layout: default
         What's up? I use <b>they/them</b> pronouns.
       </li>
       <li class="accent secondary">
-        I'm from <b>Ontario, Canada</b>.
+        Right now, I'm <b id="age"></b>. I live in <b>Ontario, Canada</b>.
       </li>
     </ul>
   </h3>
